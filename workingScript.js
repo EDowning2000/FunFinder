@@ -9,6 +9,8 @@ $(document).ready(function() {
     "&countryCode=US&size=48&sort=date,asc&apikey=XTM9Wf57rB9TMAKZ1afNeO4eWiFXPPEt";
   $("#searchBtn").on("click", function() {
     showResults();
+    $('.container').hide()
+    $('.containerTwo').show()
     
     
   });
@@ -64,26 +66,28 @@ $(document).ready(function() {
       //   dollars = '<i class="fas fa-dollar-sign"></i>';
       // }
       for (var i = 0; i < count; i++) {
-
-
          var card = $('<div>').addClass("card")
+
           var cardImg = $("<div>").addClass('card-image')
+
             var imgSrc = $('img').attr('src', "img/pexels-photo-573552.jpeg")
+
               var span = $('<span>').addClass("card-title")
+
                 var a = $("<a>").addClass("btn-floating halfway-fab waves-effect waves-light red")
+
                   var icon = $('<i>').addClass('material-icons').text("add")
+
                     var cardContent = $('<div>').addClass('card-content')
+
                       var pTag = $('<p>').addClass("infoOne").text("Name: " +response.restaurants[i].restaurant.name);
+
                         var pTagTwo = $('<p>').addClass("infoTwo").text("Cuisines: " +response.restaurants[i].restaurant.cuisines);
                           
                           var pTagThree = $('<p>').addClass("infoThree").text("Price Range: " +response.restaurants[i].restaurant.price_range);
-                        cardContent.append(pTag, pTagTwo, pTagThree)
-                        a.append(icon)
-                        span.append(a)
-                        imgSrc.append(span)
-                        cardImg.append(imgSrc)
-                        card.append(cardImg)
-                        $("#container").append(card)
+
+                       card.append(cardImg).append(imgSrc).append(span).append(a).append(icon).append(cardContent).append(pTag).append(pTagTwo).append(pTagThree);
+                        $(".info").append(card)
       }
     });
   }
