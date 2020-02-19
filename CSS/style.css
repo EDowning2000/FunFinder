@@ -1,0 +1,84 @@
+body{
+    background-image: url(background.jpg);
+    }
+    .container {
+    text-align: center;
+    box-sizing: border-box;
+    width: 40%;
+    }
+    .searchIcon{
+      margin-top: 50%;
+    }
+    .card{
+      width: 100%;
+      margin: 0 auto;
+    
+    }
+    .valign-wrapper{
+      height: 100vh;
+      width: 100%;
+    }
+    .datapicker-table{
+      color: black;
+    }
+    .datepicker-date-display{
+      background-color: rgb(82, 88, 139);
+    }
+    .datepicker {
+      color: white;
+      text-align: center;
+    }
+    .button.datepicker-date-button{
+      color: black;
+    }
+    .datepicker-table td.is-selected{
+      background-color: rgb(82, 88, 139);
+      color: white;
+    }
+    .datepicker-cancel{
+      color: rgb(82, 88, 139);
+    }
+    .datepicker-done{
+      color: rgb(82, 88, 139)
+    }
+    .btn-floating{
+      background-color: rgba(180, 178, 184, 0.829);
+    }
+    .btn-floating:hover{
+      background-color: red;
+    }
+    .clicked{
+      background-color: red;
+    }
+    @media only screen and (max-width:1025px) {
+      .container {width: 80%;}
+      
+    }
+    @media only screen and (max-width:1024px) {
+      .container {width: 80%;}
+      
+    }
+    @media only screen and (max-width:925px) {
+      .container {width: 80%;}
+      
+    }
+    @media only screen and (max-width:768px) {
+      .container {width: 90%;}
+      
+    }
+    @media only screen and (max-width:414px) {
+      .container {width: 90%;}
+      
+    }
+    @media only screen and (max-width:411px) {
+      .container {width: 90%;}
+      
+    }
+    @media only screen and (max-width:360px) {
+      .container {width: 90%;}
+      
+    }
+    @media only screen and (max-width:320px) {
+      .container {width: 95%;}
+      
+    }
