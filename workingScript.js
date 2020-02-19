@@ -1,13 +1,8 @@
 $(document).ready(function() {
-  var userLocation = $("#citySearch").val();
-  console.log(userLocation);
   count = 6;
   var lat = "";
   var lon = "";
-  eventsUrl =
-    "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" +
-    userLocation +
-    "&countryCode=US&size=48&sort=date,asc&apikey=XTM9Wf57rB9TMAKZ1afNeO4eWiFXPPEt";
+
   $("#searchBtn").on("click", function() {
     showResults();
     $(".container").hide();
@@ -115,7 +110,15 @@ $(document).ready(function() {
       }
     });
   }
+  
   function eventsGenerator() {
+    var userLocation = $("#citySearch").val();
+
+    eventsUrl =
+    "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" +
+    userLocation +
+    "&countryCode=US&size=48&sort=date,asc&apikey=XTM9Wf57rB9TMAKZ1afNeO4eWiFXPPEt";
+
     $.ajax({
       url: eventsUrl,
       method: "GET"
