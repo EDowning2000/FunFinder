@@ -57,7 +57,7 @@ $(document).ready(function() {
       }
     }).then(function(response) {
       for (var i = 0; i < count; i++) {
-        var card = $("<div>").addClass("card");
+        var card = $("<div>").addClass("card card-small");
 
         var cardImg = $("<div>").addClass("card-image");
 
