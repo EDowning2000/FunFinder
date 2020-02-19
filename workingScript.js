@@ -57,7 +57,7 @@ $(document).ready(function() {
       }
     }).then(function(response) {
       for (var i = 0; i < count; i++) {
-        var card = $("<div>").addClass("card card-small");
+        var card = $("<div>").addClass("card col s12 m4 l2");
 
         var cardImg = $("<div>").addClass("card-image");
 
@@ -92,16 +92,16 @@ $(document).ready(function() {
         var pTagFour = $("<p>")
           .addClass("infoFour")
           .text(
-            "Address" + response.restaurants[i].restaurant.location.address
+            "Address: " + response.restaurants[i].restaurant.location.address
           );
 
         card
           .append(cardImg)
           .append(imgSrc)
           .append(span)
-          .append(a)
-          .append(icon)
-          .append(cardContent)
+          // .append(a)
+          // .append(icon)
+          // .append(cardContent)
           .append(pTag)
           .append(pTagTwo)
           .append(pTagThree)
@@ -124,7 +124,7 @@ $(document).ready(function() {
       method: "GET"
     }).then(function(response) {
       for (var i = 0; i < count; i++) {
-        var card = $("<div>").addClass("card");
+        var card = $("<div>").addClass("card col s12 m4 l2");
         var cardImg = $("<div>").addClass("card-image");
         var imgSrc = $("img").attr("src", "img/pexels-photo-573552.jpeg");
         var span = $("<span>").addClass("card-title");
@@ -157,9 +157,9 @@ $(document).ready(function() {
           .append(cardImg)
           .append(imgSrc)
           .append(span)
-          .append(a)
-          .append(icon)
-          .append(cardContent)
+          // .append(a)
+          // .append(icon)
+          // .append(cardContent)
           .append(pTag)
           .append(pTagTwo)
           .append(pTagThree);
@@ -197,7 +197,7 @@ $(document).ready(function() {
         }
       }).then(function(response) {
         for (var i = 0; i < count; i++) {
-          var card = $("<div>").addClass("card");
+          var card = $("<div>").addClass("card col s12 m4 l2");
           var cardImg = $("<div>").addClass("card-image");
           var imgSrc = $("img").attr("src", "img/pexels-photo-573552.jpeg");
           var span = $("<span>").addClass("card-title");
@@ -232,9 +232,9 @@ $(document).ready(function() {
             .append(cardImg)
             .append(imgSrc)
             .append(span)
-            .append(a)
-            .append(icon)
-            .append(cardContent)
+            // .append(a)
+            // .append(icon)
+            // .append(cardContent)
             .append(pTag)
             .append(pTagTwo)
             .append(pTagThree);

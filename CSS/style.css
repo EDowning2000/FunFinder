@@ -16,11 +16,8 @@ body{
       width: 100%;
       margin: 0 auto;
     }
-    .card-small{
-      width: 15%;
-      float: left;
-      margin: 10px;
-      padding: 4px;
+    .col .s12 .m4 .l2{
+      margin-top: 10px;
     }
     .valign-wrapper{
       height: 100vh;
