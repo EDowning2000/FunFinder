@@ -66,7 +66,7 @@ $(document).ready(function() {
       //   dollars = '<i class="fas fa-dollar-sign"></i>';
       // }
       for (var i = 0; i < count; i++) {
-         var card = $('<div>').addClass("card")
+         var card = $('<div>').addClass("card card-small")
 
           var cardImg = $("<div>").addClass('card-image')
 
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
                             var pTagFour = $('<p>').addClass("infoFour").text("Address" + response.restaurants[i].restaurant.location.address)
 
-                       card.append(cardImg).append(imgSrc).append(span).append(a).append(icon).append(cardContent).append(pTag).append(pTagTwo).append(pTagThree).append(pTagFour);
+                       card.append(cardImg).append(imgSrc).append(span).append(pTag).append(pTagTwo).append(pTagThree).append(pTagFour);
                         $(".info").append(card)
       }
     });
@@ -101,7 +101,7 @@ $(document).ready(function() {
       console.log(response);
       for (var i = 0; i < count; i++) {
 
-        var card = $('<div>').addClass("card")
+        var card = $('<div>').addClass("card card-small")
           var cardImg = $("<div>").addClass('card-image')
             var imgSrc = $('img').attr('src', "img/pexels-photo-573552.jpeg")
               var span = $('<span>').addClass("card-title")
@@ -111,7 +111,7 @@ $(document).ready(function() {
                       var pTag = $('<p>').addClass("infoOne").text("Name: " +response._embedded.events[i].name);
                         var pTagTwo = $('<p>').addClass("infoTwo").text("Timing Details: " +response._embedded.events[i].dates.start.localDate);
                           var pTagThree = $('<p>').addClass("infoThree").html('<a target="_blank" href=' +response._embedded.events[i].url +">" +"Click Here" +"</a>");
-                     card.append(cardImg).append(imgSrc).append(span).append(a).append(icon).append(cardContent).append(pTag).append(pTagTwo).append(pTagThree);
+                     card.append(cardImg).append(imgSrc).append(span).append(pTag).append(pTagTwo).append(pTagThree);
                       $(".info").append(card)
       }
     });
@@ -154,7 +154,7 @@ $(document).ready(function() {
       }).then(function(response) {
         console.log({ response });
         for (var i = 0; i < count; i++) {
-          var card = $('<div>').addClass("card")
+          var card = $('<div>').addClass("card card-small")
           var cardImg = $("<div>").addClass('card-image')
             var imgSrc = $('img').attr('src', "img/pexels-photo-573552.jpeg")
               var span = $('<span>').addClass("card-title")
@@ -165,7 +165,7 @@ $(document).ready(function() {
                         var pTagTwo = $('<p>').addClass("infoTwo").text("Address: " +response.nearby_restaurants[i].restaurant.location.address);
                           var pTagThree = $('<p>').addClass("infoThree").text('Cuisines: ' +response.nearby_restaurants[i].restaurant.cuisines);
                             var pTagFour = $('<p>').addClass('infoFour').text('Price Range: ' + response.nearby_restaurants[i].restaurant.price_range)
-                     card.append(cardImg).append(imgSrc).append(span).append(a).append(icon).append(cardContent).append(pTag).append(pTagTwo).append(pTagThree);
+                     card.append(cardImg).append(imgSrc).append(span).append(pTag).append(pTagTwo).append(pTagThree);
                       $(".info").append(card)
         }
         // addCityToLocalStorage(cityText, {

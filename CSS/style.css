@@ -12,7 +12,12 @@ body{
     .card{
       width: 100%;
       margin: 0 auto;
-    
+    }
+    .card-small{
+      width: 15%;
+      float: left;
+      margin: 10px;
+      padding: 4px;
     }
     .valign-wrapper{
       height: 100vh;
@@ -50,6 +55,7 @@ body{
     .clicked{
       background-color: red;
     }
+
     @media only screen and (max-width:1025px) {
       .container {width: 80%;}
       
