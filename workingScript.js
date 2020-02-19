@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(".containerTwo").show();
   });
 
-  $(".randomizer").on("click", function() {
+  $("#randomizer").on("click", function() {
     showResults();
     $('.info').empty()
   });
@@ -17,6 +17,7 @@ $(document).ready(function() {
   $('#backBtn').on('click',function(){
     $('.info').empty()
     $('.container').show()
+    $
     $('.containerTwo').hide()
   })
 
