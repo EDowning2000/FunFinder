@@ -7,5 +7,8 @@ This application was written structured in HTML, styled with CSS, and the functi
 # API
 The API's that were used were TicketMaster and Zomato
 
+# Screenshots 
+<img width="1116" alt="Screen Shot 2020-02-19 at 2 13 30 PM" src="https://user-images.githubusercontent.com/57017788/74867105-16848b00-5322-11ea-9e11-b0b5bdfc050b.png">
+
 # Collaborators
 The collaborators on this project were Arlene Sanchez, Emerson Downing, Joe Santos, and Asghar Shiekh
