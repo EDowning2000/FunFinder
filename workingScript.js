@@ -86,7 +86,9 @@ $(document).ready(function() {
                           
                           var pTagThree = $('<p>').addClass("infoThree").text("Price Range: " +response.restaurants[i].restaurant.price_range);
 
-                       card.append(cardImg).append(imgSrc).append(span).append(a).append(icon).append(cardContent).append(pTag).append(pTagTwo).append(pTagThree);
+                            var pTagFour = $('<p>').addClass("infoFour").text("Address" + response.restaurants[i].restaurant.location.address)
+
+                       card.append(cardImg).append(imgSrc).append(span).append(a).append(icon).append(cardContent).append(pTag).append(pTagTwo).append(pTagThree).append(pTagFour);
                         $(".info").append(card)
       }
     });
@@ -98,11 +100,19 @@ $(document).ready(function() {
     }).then(function(response) {
       console.log(response);
       for (var i = 0; i < count; i++) {
-        $(".ent").html("Event Name: " + response._embedded.events[i].name);
-        $(".ent").html("Timing Details: " + response._embedded.events[i].dates.start.localDate
-        );
-        $(".ent").html('<a target="_blank" href=' +response._embedded.events[i].url +">" +"Click Here" +"</a>"
-        );
+
+        var card = $('<div>').addClass("card")
+          var cardImg = $("<div>").addClass('card-image')
+            var imgSrc = $('img').attr('src', "img/pexels-photo-573552.jpeg")
+              var span = $('<span>').addClass("card-title")
+                var a = $("<a>").addClass("btn-floating halfway-fab waves-effect waves-light red")
+                  var icon = $('<i>').addClass('material-icons').text("add")
+                    var cardContent = $('<div>').addClass('card-content')
+                      var pTag = $('<p>').addClass("infoOne").text("Name: " +response._embedded.events[i].name);
+                        var pTagTwo = $('<p>').addClass("infoTwo").text("Timing Details: " +response._embedded.events[i].dates.start.localDate);
+                          var pTagThree = $('<p>').addClass("infoThree").html('<a target="_blank" href=' +response._embedded.events[i].url +">" +"Click Here" +"</a>");
+                     card.append(cardImg).append(imgSrc).append(span).append(a).append(icon).append(cardContent).append(pTag).append(pTagTwo).append(pTagThree);
+                      $(".info").append(card)
       }
     });
   }
@@ -122,8 +132,8 @@ $(document).ready(function() {
     }).then(function(response) {
       //console.log("findLatLon");
       //console.log(response);
-      lat = response.location_suggestions[0].latitude;
-      lon = response.location_suggestions[0].longitude;
+      var lat = response.location_suggestions[0].latitude;
+      var lon = response.location_suggestions[0].longitude;
       //console.log("lat: " + lat + "; lon: " + lon);
       // var cityText = $(".cityInput").val();
       // $(".cityInput").val("");
@@ -144,20 +154,19 @@ $(document).ready(function() {
       }).then(function(response) {
         console.log({ response });
         for (var i = 0; i < count; i++) {
-          name = response.nearby_restaurants[i].restaurant.name;
-          address = response.nearby_restaurants[i].restaurant.location.address;
-          cuisines = response.nearby_restaurants[i].restaurant.cuisines;
-          priceRange = response.nearby_restaurants[i].restaurant.price_range;
-
-          $(".print").html(
-            name +
-              "<br>Cuisine: " +
-              cuisines +
-              "<br>Address: " +
-              address +
-              "<br>Price Range: " +
-              priceRange
-          );
+          var card = $('<div>').addClass("card")
+          var cardImg = $("<div>").addClass('card-image')
+            var imgSrc = $('img').attr('src', "img/pexels-photo-573552.jpeg")
+              var span = $('<span>').addClass("card-title")
+                var a = $("<a>").addClass("btn-floating halfway-fab waves-effect waves-light red")
+                  var icon = $('<i>').addClass('material-icons').text("add")
+                    var cardContent = $('<div>').addClass('card-content')
+                      var pTag = $('<p>').addClass("infoOne").text("Name: " +response.nearby_restaurants[i].restaurant.name);
+                        var pTagTwo = $('<p>').addClass("infoTwo").text("Address: " +response.nearby_restaurants[i].restaurant.location.address);
+                          var pTagThree = $('<p>').addClass("infoThree").text('Cuisines: ' +response.nearby_restaurants[i].restaurant.cuisines);
+                            var pTagFour = $('<p>').addClass('infoFour').text('Price Range: ' + response.nearby_restaurants[i].restaurant.price_range)
+                     card.append(cardImg).append(imgSrc).append(span).append(a).append(icon).append(cardContent).append(pTag).append(pTagTwo).append(pTagThree);
+                      $(".info").append(card)
         }
         // addCityToLocalStorage(cityText, {
         //   name,
